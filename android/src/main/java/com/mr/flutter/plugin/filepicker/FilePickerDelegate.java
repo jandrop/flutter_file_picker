@@ -211,10 +211,6 @@ public class FilePickerDelegate implements PluginRegistry.ActivityResultListener
 
     @SuppressWarnings("deprecation")
     private ArrayList<Parcelable> getSelectedItems(Bundle bundle){
-        if(Build.VERSION.SDK_INT >= 33){
-            return bundle.getParcelableArrayList("selectedItems", Parcelable.class);
-        }
-
         return bundle.getParcelableArrayList("selectedItems");
     }
 
